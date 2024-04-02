@@ -1,7 +1,10 @@
 import { observer } from 'mobx-react';
 import './App.css';
+import { useContext } from 'react';
+import { CounterContext, useCounterStore } from './context/counterContext';
 
-function App({ myCounter }) {
+function App() {
+  const myCounter = useCounterStore()
   return (
     <div
       style={{
